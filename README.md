@@ -11,7 +11,7 @@
 ```sh
 #!/bin/bash
 #
-mpic++ -O0 -fopenmp -mavx -o avx2-mpic++-22336059-董胜凡 avx2-mpic++-22336059-董胜凡.cpp
+mpic++ -O0 -fopenmp -mavx -o image_process image_process.cpp
 echo "Please enter the value of the seed:"
 
 while true; do
@@ -26,7 +26,7 @@ while true; do
     fi
 
 done
-mpirun -np 4 avx2-mpic++-22336059-董胜凡 $seed
+mpirun -np 4 image_process $seed
 ```
 
 ### 优化思路
